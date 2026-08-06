@@ -15,7 +15,7 @@ public class KeyboardInputMixin {
     )
     private boolean changeSprint(KeyBinding key) {
 
-        if (key == HoldToWalkClient.getSprintKey() && HoldToWalkClient.config.enabled) {
+        if (key == HoldToWalkClient.getSprintKey() && HoldToWalkClient.config.isEnabled()) {
             return !HoldToWalkClient.isSprintKeyDown();
         }
 

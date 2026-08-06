@@ -24,10 +24,9 @@ public class HoldToWalkClient implements ClientModInitializer {
 				return;
 			}
 
-			if (!config.enabled) {
+			if (!config.isEnabled()) {
 				return;
 			}
-
 
 			client.options.getSprintToggled().setValue(false);
 
