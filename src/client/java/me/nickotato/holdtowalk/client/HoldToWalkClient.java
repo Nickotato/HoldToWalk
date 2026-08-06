@@ -1,6 +1,6 @@
-package me.nickoato.client;
+package me.nickotato.holdtowalk.client;
 
-import me.nickoato.client.config.ModConfig;
+import me.nickotato.holdtowalk.client.config.ModConfig;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
@@ -12,7 +12,6 @@ import org.slf4j.LoggerFactory;
 public class HoldToWalkClient implements ClientModInitializer {
 	public static final Logger LOGGER = LoggerFactory.getLogger("HoldToWalk");
 	public static final ModConfig config = new ModConfig();
-	private Boolean originalToggleSprint = null;
 
 	@Override
 	public void onInitializeClient() {
@@ -25,34 +24,12 @@ public class HoldToWalkClient implements ClientModInitializer {
 				return;
 			}
 
-			if (originalToggleSprint == null) {
-				originalToggleSprint = client.options.getSprintToggled().getValue();
-			}
-
-			if (client.options.backKey.isPressed()) {
-				config.enabled = !config.enabled;
-				LOGGER.info(String.valueOf(config.enabled));
-				// This if statement is only for testing, remove later.
-			}
-
 			if (!config.enabled) {
-//				if (originalToggleSprint != null ){
-//					client.options.getSprintToggled().setValue(originalToggleSprint);
-//				}
-
 				return;
 			}
 
 
 			client.options.getSprintToggled().setValue(false);
-
-//			if (client.options.sprintKey.isPressed()) {
-//				client.options.getSprintToggled().setValue(false);
-//				LOGGER.info("HOLDING SPRINT KEY");
-//			} else {
-//				client.options.getSprintToggled().setValue(true);
-//			}
-
 
 		});
 	}

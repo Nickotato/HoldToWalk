@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "me.nickoato.client.mixin",
+	"package": "me.nickotato.holdtowalk.client.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"client": [
 		"ClientPlayerEntityMixin",

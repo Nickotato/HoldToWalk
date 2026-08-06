@@ -3,21 +3,22 @@
 	"id": "hold-to-walk",
 	"version": "${version}",
 	"name": "Hold to Walk",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A mod that changes it so you sprint by default, and pressing the sprint key makes you walk.",
 	"authors": [
-		"Me!"
+		"Nickotato"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://discord.gg/aEGxqg8VbZ",
+		"sources": "https://github.com/Nickotato/HoldToWalk"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/hold-to-walk/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"client": [
-			"me.nickoato.client.HoldToWalkClient"
-		]
+			"me.nickotato.holdtowalk.client.HoldToWalkClient"
+		],
+		"modmenu": ["me.nickotato.holdtowalk.client.screen.ModMenuIntegration"]
 	},
 	"mixins": [
 		{
@@ -30,5 +31,16 @@
 		"minecraft": "~1.21.11",
 		"java": ">=21",
 		"fabric-api": "*"
+	},
+	"suggests": {
+		"modmenu": "17.0.0"
+	},
+	"custom": {
+		"modmenu": {
+			"links": {
+				"modmenu.discord": "https://discord.gg/aEGxqg8VbZ",
+				"modmenu.youtube": "https://www.youtube.com/@Nickotato"
+			}
+		}
 	}
 }

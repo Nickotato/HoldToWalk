@@ -1,6 +1,6 @@
-package me.nickoato.client.mixin;
+package me.nickotato.holdtowalk.client.mixin;
 
-import me.nickoato.client.HoldToWalkClient;
+import me.nickotato.holdtowalk.client.HoldToWalkClient;
 import net.minecraft.client.input.KeyboardInput;
 import net.minecraft.client.option.KeyBinding;
 import org.spongepowered.asm.mixin.Mixin;

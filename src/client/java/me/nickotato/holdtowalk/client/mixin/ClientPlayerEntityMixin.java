@@ -1,7 +1,7 @@
-package me.nickoato.client.mixin;
+package me.nickotato.holdtowalk.client.mixin;
 
 import com.llamalad7.mixinextras.injector.ModifyReturnValue;
-import me.nickoato.client.HoldToWalkClient;
+import me.nickotato.holdtowalk.client.HoldToWalkClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
