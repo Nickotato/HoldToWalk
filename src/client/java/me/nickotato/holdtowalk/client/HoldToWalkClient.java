@@ -5,7 +5,6 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.KeyBinding;
-import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -38,12 +37,6 @@ public class HoldToWalkClient implements ClientModInitializer {
 	}
 
 	public static boolean isSprintKeyDown() {
-		MinecraftClient client = MinecraftClient.getInstance();
-
-		long window = client.getWindow().getHandle();
-
-		int key = getSprintKey().getDefaultKey().getCode();
-
-        return GLFW.glfwGetKey(window, key) == GLFW.GLFW_PRESS;
+		return getSprintKey().isPressed();
 	}
 }
